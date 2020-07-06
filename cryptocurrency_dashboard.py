@@ -10,15 +10,15 @@ import dash_html_components as html
 
 
 # getting names of top cryptocurrencies
-url = requests.get('https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD')
+url = requests.get('https://min-api.cryptocompare.com/data/top/mktcapfull?limit=50&tsym=USD')
 data = url.json()
 
-coininfo = [] # for extracting coininfo -- working
+coininfo = [] # for extracting coininfo 
 for item in data["Data"]:
     coininfo.append(item["CoinInfo"])  
     
     
-names=[] # for extracting name -- working
+names=[] # for extracting name 
 for item in coininfo:
     names.append(item["Name"])  
 
@@ -109,10 +109,9 @@ def update_graph(n_clicks, crypto_ticker, start_date, end_date):
         data = df.loc[start:end,:]
         traces.append({'x':data.index,'y':data[tic],'name':tic})
         
-    '''Pozwala na zmiane tytulu wykresu na podstawie wybranej wartosci'''
+    
     fig = {'data':traces,
-           'layout':{'title':crypto_ticker}
-                  }
+           'layout':{'title':crypto_ticker}}
     
     return fig
 
