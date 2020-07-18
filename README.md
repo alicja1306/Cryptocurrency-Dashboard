@@ -7,6 +7,5 @@ Tools: dash, plotly, pandas, requests
 
 Dashboard for monitoring and comparing historical prices of top 50 cryptocurrencies that uses CryptoCompare API. 
 
-images/cryptocurrency_dashboard1.png
 
 <img src='images/cryptocurrency_dashboard1.png' width=900 height = 400 />
