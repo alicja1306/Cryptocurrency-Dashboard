@@ -1,4 +1,4 @@
-# Cryptocurrency Dashboard :chart:
+# Cryptocurrency Dashboard :moneybag:
 
 <img src="https://i.gyazo.com/64a7a68f1ac63f3163b47dceb2b715d5.gif"  width=900, height = 400 />
 
