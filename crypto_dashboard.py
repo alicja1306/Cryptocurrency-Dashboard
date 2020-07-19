@@ -63,7 +63,7 @@ colors = {
 
 app = dash.Dash(__name__,external_stylesheets=external_stylesheets)
 
-app.layout = html.Div(style={'backgroundColor': colors['background'] ,'color': colors['text'],'padding':24},
+app.layout = html.Div(style={'backgroundColor': colors['background'] ,'color': colors['text'],'padding-left':24, 'padding-top':72, 'padding-bottom':72},
     children=[
         html.Div(className='row', children=[
                     html.Div(className='four columns div-user-controls',
@@ -119,7 +119,8 @@ def update_graph(n_clicks, crypto_ticker, start_date, end_date):
            'layout': go.Layout(
                    colorway=['#ffffb3', '#99ffbb', '#ff5050', '#4da6ff', '#df80ff', '#ff794d'],
                    template='plotly_dark',
-                   margin=dict(l=10, r=10, t=50, b=100)
+                   margin=dict(l=10, r=10, t=50, b=100),
+                   height=700
           )}
     
     return fig
